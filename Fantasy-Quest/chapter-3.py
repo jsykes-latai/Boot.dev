@@ -82,3 +82,157 @@ def main():
 main()
 
 # Lesson 5
+def to_celsius(f):
+    conversion = 5/9 * (f - 32)
+    return conversion
+
+
+## Don't touch below this line
+
+
+def test(f):
+    c = round(to_celsius(f), 2)
+    print(f, "degrees fahrenheit is", c, "degrees celsius")
+
+
+test(100)
+test(88)
+test(104)
+test(112)
+
+# Lesson 6
+def hours_to_seconds(hours):
+    conversion = (hours * 60) * 60
+    return conversion
+
+
+# Don't touch below this line
+
+
+def test(hours):
+    secs = hours_to_seconds(hours)
+    print(hours, "hours is", secs, "seconds")
+
+
+test(10)
+test(1)
+test(25)
+test(100)
+test(33)
+
+# Lesson 7
+def become_warrior(full_name, power):
+    title = f"{full_name} the warrior"
+    new_power = power + 1
+    return title, new_power
+
+
+# Don't edit below this line
+
+
+def main():
+    test("Frodo Baggins", 5)
+    test("Bilbo Baggins", 10)
+    test("Gandalf The Grey", 9000)
+
+
+def test(input1, input2):
+    result1, result2 = become_warrior(input1, input2)
+    print(result1, "has a power level of:", result2)
+
+
+main()
+
+# Lesson 8
+def get_punched(health, armor = 0):
+    damage = 50 - armor
+    new_health = health - damage
+    return new_health
+
+
+def get_slashed(health, armor = 0):
+    damage = 100 - armor
+    new_health = health - damage
+    return new_health
+
+
+# Don't touch below this line
+
+
+def test(health, armor):
+    print(f"Running tests for health {health} and armor {armor}")
+    print("========================================")
+    print(f"Health: {health}, Armor: {armor}")
+    print(f"Health after punch: {get_punched(health, armor)}")
+    print("----------------------------------------")
+    print(f"Health: {health}, Armor: {armor}")
+    print(f"Health after slash: {get_slashed(health, armor)}")
+    print("----------------------------------------")
+    print(f"Health: {health}, Armor: no armor!")
+    print(f"Health after slash: {get_slashed(health)}")
+    print("----------------------------------------")
+    print(f"Health: {health}, Armor: no armor!")
+    print(f"Health after punch: {get_punched(health)}")
+    print("----------------------------------------\n")
+
+
+test(400, 5)
+test(300, 3)
+test(200, 1)
+
+# Lesson 9
+def curse(weapon_damage):
+    lesser_cursed = weapon_damage * 0.5
+    greater_cursed = weapon_damage * 0.25
+    return lesser_cursed, greater_cursed
+
+
+# Don't modify below this line
+
+
+def test(weapon_damage):
+    print("Weapon's base damage:", float(weapon_damage))
+    print("Cursing...")
+    lesser_cursed, greater_cursed = curse(weapon_damage)
+    print("With lesser curse the damage is:", float(lesser_cursed), "damage.")
+    print("With greater curse the damage is:", float(greater_cursed), "damage.")
+    print("=====================================")
+
+
+def main():
+    test(100)
+    test(500)
+    test(1000)
+
+
+main()
+
+# Lesson 10
+def enchant_and_attack(target_health, damage, weapon):
+    enchanted_damage = damage + 10
+    new_health = target_health - enchanted_damage
+    enchanted_weapon = f"enchanted {weapon}"
+    return enchanted_weapon, new_health
+
+
+# Don't modify below this line
+
+
+def test(target_health, damage, weapon):
+    print(f"The target has {target_health} health.")
+    print(f"{weapon} base damage: {damage}... Enchanting and attacking.")
+    enchanted_weapon, new_health = enchant_and_attack(target_health, damage, weapon)
+    print(f"The target has been attacked with the {enchanted_weapon}.")
+    print(f"The target has {new_health} health remaining.")
+    print("=====================================")
+
+
+def main():
+    test(100, 50, "sword")
+    test(500, 100, "axe")
+    test(1000, 250, "bow")
+
+
+main()
+
+# End of Chapter 3
