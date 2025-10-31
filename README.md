@@ -1,2 +1,2 @@
 # Boot.dev
-Contains Boot.dev Coding Projects
+Contains Boot.dev Coding Exercises
